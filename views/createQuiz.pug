@@ -1,0 +1,27 @@
+html
+	head
+		title CreateQuiz
+
+	body
+		script
+			include query.js
+		p Creator Name:
+			input#cName(type="textbox")
+		p Tags:
+			input#tags(type="textbox")
+
+			h1 Questions in Quiz
+
+			div#qQuestions
+			button#saveQuiz(type="button" onclick='submitQ()') Save Quiz
+			
+			p Search/Add new questions
+		p Category:
+		select#category(onchange="refresh()")
+			each c in categories
+				option=c
+		p Difficulty:
+		select#difficulty(onchange="refresh()")
+			each d in difficulties
+				option=d
+		div#refresh

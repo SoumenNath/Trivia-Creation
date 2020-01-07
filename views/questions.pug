@@ -1,0 +1,8 @@
+html
+	head
+		title Card search results
+body
+	div#main
+		each question in questions
+			a(href='/questions/'+question._id)=question.question
+			br

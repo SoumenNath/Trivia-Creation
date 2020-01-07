@@ -1,0 +1,10 @@
+html
+	head
+		title=Quiz
+
+	body
+		p= "Creator: " + quiz.Creator
+		p= "Tags: " + quiz.Tags
+		each q in quiz.Questions
+			a(href='/questions/'+q._id)=q.question
+			br

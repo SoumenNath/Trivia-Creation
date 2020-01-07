@@ -1,0 +1,12 @@
+html
+	head
+		title=Question
+
+	body
+		p= "category: " + question.category
+		p= "difficulty: " + question.difficulty
+		p= "question: " + question.question
+		p= "correct answer: " + question.correct_answer
+		p= "incorrect answers: "
+		each i in question.incorrect_answers
+			p=i
